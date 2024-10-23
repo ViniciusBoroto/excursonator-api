@@ -10,7 +10,7 @@ def get_all_excursions():
     pass
 
 #GET - obter um caminho por usuario
-@app.get("/excursion/{username}")
+@app.get("/excursion/{id}")
 def get_excursions_path():
     pass
 
@@ -20,7 +20,7 @@ def creat_excursion():
    pass
 
 #DELETE - remover um item
-@app.delete("/excursion/{username}")
+@app.delete("/excursion/{id}")
 def delete_item():
     pass
 
