@@ -20,7 +20,7 @@ def creat_excursion():
    pass
 
 #DELETE - remover um item
-@app.delete("/excursion/{id}")
+@app.delete("/excursion/{id`}")
 def delete_item():
     pass
 
