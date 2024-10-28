@@ -5,27 +5,27 @@ from pydantic import BaseModel
 app = FastAPI()
 
 #GET - obter todos os itens
-@app.get("/excursion")
+@app.get("/excursions")
 def get_all_excursions():
     pass
 
 #GET - obter um caminho por usuario
-@app.get("/excursion/{id}")
+@app.get("/excursions/{id}")
 def get_excursions_path():
     pass
 
 #POST - Add um novo item
-@app.post("/excursion/")
+@app.post("/excursions/")
 def creat_excursion():
    pass
 
 #DELETE - remover um item
-@app.delete("/excursion/{id`}")
+@app.delete("/excursions/{id}")
 def delete_item():
     pass
 
 #PUT - atualizar um item
-@app.put("/excursion")
+@app.put("/excursions")
 def update_item():
     pass
 
