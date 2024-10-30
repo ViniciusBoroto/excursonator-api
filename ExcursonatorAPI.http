@@ -1,0 +1,6 @@
+@ExcursonatorAPI_HostAddress = http://localhost:5096
+
+GET {{ExcursonatorAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
