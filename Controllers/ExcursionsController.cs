@@ -45,6 +45,6 @@ namespace ExcursonatorAPI.Controllers
         [HttpDelete("{id:int}")]
         public ActionResult<Excursion>Delete(int id)
         {
-            Console.WriteLine("Excursão (" +id + ") deletada.")
+            Console.WriteLine("Excursão (" +id + ") deletada")
         }
     }
