@@ -27,5 +27,24 @@ namespace ExcursonatorAPI.Controllers
             };
             return Ok(excursao);
             }
+    	}
+    
+		[HttpPost]
+        public ActionResult<Excursion> Create(Excursion newExcursion)
+        {
+            str = "hello world"
+  			Console.WriteLine(str)
+        }
+        
+        [HttpPut("{id:int}")]
+        public ActionResult<Excursion>Update(int id, Excursion updatedExcursion)
+        {
+            Console.WriteLine(updatedExcursion + id)
+        }
+
+        [HttpDelete("{id:int}")]
+        public ActionResult<Excursion>Delete(int id)
+        {
+            Console.WriteLine("Excursão (" +id + ") deletada.")
+        }
     }
-}
