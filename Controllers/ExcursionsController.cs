@@ -32,24 +32,28 @@ namespace ExcursonatorAPI.Controllers
             };
             return Ok(excursao);
             }
-    	}
     
 		[HttpPost]
         public ActionResult<Excursion> Create(Excursion newExcursion)
         {
-            str = "hello world"
-  			Console.WriteLine(str)
+        var str = "hello world";
+
+              Console.WriteLine(str);
+            throw new NotImplementedException();
         }
         
         [HttpPut("{id:int}")]
         public ActionResult<Excursion>Update(int id, Excursion updatedExcursion)
         {
-            Console.WriteLine(updatedExcursion + id)
+        Console.WriteLine(updatedExcursion.ToString() + id);
+        throw new NotImplementedException();
         }
 
         [HttpDelete("{id:int}")]
         public ActionResult<Excursion>Delete(int id)
         {
-            Console.WriteLine("Excursão (" +id + ") deletada")
+        Console.WriteLine("Excursão (" + id + ") deletada");
+        throw new NotImplementedException();
+    	}
         }
     }
