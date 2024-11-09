@@ -8,12 +8,16 @@ namespace ExcursonatorAPI.Controllers
     [ApiController]
     public class ExcursionsController : ControllerBase
     {
+        public ExcursionsController()
+        {
+            
+        }
         [HttpGet]
         public ActionResult<List<Excursion>> GetAll()
         {
             var excursoes = new List<Excursion>() {
-                new Excursion() {Id = 1, Name ="Excursao para Marília"},
-                new Excursion() {Id = 1, Name = "Excursao para Bauru"}
+                new Excursion() {Id = 1, Name ="Excursao para Marília", Local="Marilia"},
+                new Excursion() {Id = 1, Name = "Excursao para Bauru", Local="Bauru"}
             };
             return Ok(excursoes);
         }
@@ -23,9 +27,15 @@ namespace ExcursonatorAPI.Controllers
             var excursao = new Excursion()
             {
                 Id = id,
-                Name = $"Excursão para cidade de Id {id}"
+                Name = $"Excursão para cidade de Id {id}",
+                Local = "",
             };
             return Ok(excursao);
             }
+        [HttpPost]
+        public void Create(Excursion excursion)
+        {
+
+        }
     }
 }

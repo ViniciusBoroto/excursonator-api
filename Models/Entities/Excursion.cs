@@ -2,7 +2,11 @@
 {
     public class Excursion
     {
-        public int Id { get; set; }
-        public string? Name { get; set; }
+        public required int Id { get; set; }
+        public String? Name { get; set; }
+        public DateTime Date { get; set; }
+        public DateTime ReturnDate { get; set; }
+
+        public required String Local { get; set; }
     }
 }

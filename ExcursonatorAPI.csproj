@@ -7,13 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.10" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
-    <Folder Include="Data\Contexts\" />
-    <Folder Include="Data\Repositories\" />
     <Folder Include="Models\Interfaces\" />
   </ItemGroup>
 
