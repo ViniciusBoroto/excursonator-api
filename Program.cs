@@ -1,5 +1,6 @@
 using ExcursonatorAPI.Data.Contexts;
 using ExcursonatorAPI.Data.Repositories;
+using ExcursonatorAPI.Models.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -9,7 +10,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 // Add services to the container.
 builder.Services.AddDbContext<SqliteContext>(options =>options.UseSqlite(connectionString));
-
+builder.Services.AddScoped<IExcursionsRepository, ExcursionsRepository>();
 
 
 builder.Services.AddControllers();
@@ -27,6 +28,13 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(builder =>
+{
+    builder.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+});
 
 app.UseAuthorization();
 
