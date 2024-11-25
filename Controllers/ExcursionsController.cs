@@ -1,6 +1,7 @@
 ﻿using ExcursonatorAPI.Data.Repositories;
 using ExcursonatorAPI.Models.DTOs;
 using ExcursonatorAPI.Models.Entities;
+using ExcursonatorAPI.Models.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,9 +11,9 @@ namespace ExcursonatorAPI.Controllers
     [ApiController]
     public class ExcursionsController : ControllerBase
     {
-        private readonly ExcursionsRepository _excursionsRepository;
+        private readonly IExcursionsRepository _excursionsRepository;
 
-        public ExcursionsController(ExcursionsRepository excursionsRepository)
+        public ExcursionsController(IExcursionsRepository excursionsRepository)
         {
             this._excursionsRepository = excursionsRepository;
         }
